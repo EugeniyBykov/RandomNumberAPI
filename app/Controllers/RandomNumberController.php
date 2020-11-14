@@ -60,6 +60,8 @@ class RandomNumberController extends BaseController{
 
         if ($value) {
             return self::createResponse(200, [ "value" => $value[0]['value'] ]); 
+        } else {
+            return self::createResponse(200, [ "status" => "value with current id not exist" ]); 
         }
     }
     
